@@ -1,0 +1,36 @@
+query tiene ip.id = 19578, reply no tiene id
+
+op = BOOTREQUEST / BOOTREPLY
+htype = 1
+hlen = 6
+xid = el mismo
+ciaddr = la ip del query
+yiaddr = la ip del query
+siaddr = la ip del router
+giaddr = 0.0.0.0
+
+chaddr tienen el mismo
+sname tienen el mismo
+file tienen el mismo
+optiones tienen las mismas
+
+DHCP OPTIONS QUERY
+options = 
+[('message-type', 3), ('client_id', b'\x01|\xb0\xc2z\xb4\xa3'), ('hostname', b'MarianPC'), (81, b'\x00\x00\x00MarianPC'), ('vendor_class_id', b'MSFT 5.0'), ('param_req_list', [1, 3, 6, 15, 31, 33, 43, 44, 46, 47, 119, 121, 249, 252]), 'end']
+
+[message-type=request client_id=b'\x01|\xb0\xc2z\xb4\xa3' hostname=b'MarianPC' 81=b'\x00\x00\x00MarianPC' vendor_class_id=b'MSFT 5.0' param_req_list=[1, 3, 6, 15, 31, 33, 43, 44, 46, 47, 119, 121, 249, 252] end]
+
+client_id: [length (no parece que lo ponga), hardwary_type (Ethernet=0x01), mac_address (la intenta decodificar): "7cb0c27ab4a3" ]
+
+[subnet mask, router, domain name server, domain name, perform router discover, static route, vendor-specific information, netbios over tcp/ip name server, netbios over tcp/ip node type, netbios over tcp/ip scope, domain search, classless static route, private/classless static route (microsoft), private/proxy autodiscovery]
+
+
+DHCP OPTIONS ANSWER
+options = 
+[('message-type', 5), ('server_id', '192.168.37.1'), ('lease_time', 600), ('subnet_mask', '255.255.255.0'), ('router', '192.168.37.1'), ('name_server', '8.8.8.8', '8.8.4.4'), 'end', 'pad', 'pad', 'pad', 'pad', 'pad', 'pad', 'pad', 'pad', 'pad', 'pad', 'pad', 'pad', 'pad', 'pad', 'pad', 'pad', 'pad', 'pad', 'pad', 'pad', 'pad', 'pad']
+
+[message-type=ack server_id=192.168.37.1 lease_time=600 subnet_mask=255.255.255.0 router=192.168.37.1 name_server=8.8.8.8,8.8.4.4 end pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad pad]
+
+[53, 54, 51, 1, 3, 6, 255]
+
+server_id: [length (no parece que lo ponga), ip]
